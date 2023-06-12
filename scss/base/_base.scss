@@ -1,0 +1,37 @@
+//* Файл с базовыми стилями
+
+// Подключаем шрифты
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@400;700&family=Roboto:wght@300&display=swap');
+
+// Тело страницы
+body {
+
+    // Шрифт
+    font-family: $font-main;
+
+    // Цвет фона
+    background-color: $dark;
+
+    // Цвет текста
+    color: $white;
+
+    // Размер шрифта
+    font-size: 16px;
+}
+
+// Ссылки
+a {
+
+    // Цвет текста
+    color: $white;
+
+    // Плавный переход при изменении цвета
+    transition: color 0.2s ease-in;
+
+    // Стиль при наведении курсора
+    &:hover {
+
+        // Цвет текста
+        color: $accent;
+    }
+}
