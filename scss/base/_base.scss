@@ -47,6 +47,13 @@ a {
 
     // Ширина
     width: 1140px;
+
+    // Модификатор для маленького контейнера
+    &--small {
+
+        // Ширина
+        width: 840px;
+    }
 }
 
 // Блок для выравнивания элементов по правому краю
@@ -54,4 +61,17 @@ a {
 
     // Выравниваем элементы по правому краю
     text-align: right;
+}
+
+// Класс для скрытия элементов
+.visually-hidden {
+
+    // Свойства для скрытия элемента
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
 }

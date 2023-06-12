@@ -106,9 +106,23 @@ a:hover {
   padding: 0 15px;
   width: 1140px;
 }
+.container--small {
+  width: 840px;
+}
 
 .text-right {
   text-align: right;
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
 
 .header {
@@ -181,4 +195,29 @@ a:hover {
 }
 .info--phone::before {
   background-image: url("./../img/header/phone.svg");
+}
+
+.benefits {
+  padding: 120px 0;
+}
+
+.benefits__row {
+  display: flex;
+  -moz-column-gap: 70px;
+       column-gap: 70px;
+}
+
+.benefits__item {
+  text-align: center;
+}
+
+.benefits__item-img {
+  margin-bottom: 53px;
+}
+
+.benefits__item-text {
+  font-size: 20px;
+  line-height: 1.35;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
 }/*# sourceMappingURL=main.css.map */
