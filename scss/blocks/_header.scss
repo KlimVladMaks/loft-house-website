@@ -1,0 +1,37 @@
+// Хедер
+.header {
+
+    // Превращаем элемент во флекс-контейнер
+    display: flex;
+
+    // Распределяем флекс-элементы в колонну 
+    flex-direction: column;
+
+    // Равномерно распределяем элементы, прижав крайние к краям
+    justify-content: space-between;
+
+    // Внутренние отступы
+    padding-top: 30px;
+    padding-bottom: 74px;
+
+    // Минимальная высота
+    min-height: min(840px, 100vh);
+
+    // Фон
+    background: 
+        linear-gradient(180deg, #242B33 11.98%, rgba(45, 52, 60, 0.38) 51.04%, #242B33 92.19%), 
+        url("./../img/header/header-bg.png");
+}
+
+// Блок для выравнивания элементов в строку
+.header__top-row {
+
+    // Превращаем элемент во флекс-контейнер
+    display: flex;
+
+    // Равномерно распределяем элементы, прижав крайние к краям
+    justify-content: space-between;
+
+    // Выравниваем флекс-элементы по центру
+    align-items: center;
+}
