@@ -1,0 +1,89 @@
+// Поле ввода в форме
+.form__input {
+
+    // Высота
+    height: 50px;
+
+    // Внутренние отступы
+    padding: 12px;
+
+    // Выравниваем текст по центру
+    text-align: center;
+
+    // Цвет фона
+    background-color: rgba(255, 255, 255, 0.2);
+
+    // Цвет текста
+    color: $white;
+
+    // Размер текста
+    font-size: 14px;
+
+    // Плавный переход при изменении цвета фона
+    transition: background-color 0.2s ease-in;
+
+    // Плейсхолдер поля ввода
+    &::placeholder {
+
+        // Цвет текста
+        color: $placeholder;
+    }
+
+    // Когда поле ввода находит в фокусе
+    &:focus {
+
+        // Цвет фона
+        background-color: rgba(255, 255, 255, 0.25);
+    }
+}
+
+// Текст с сообщением о приватности
+.form__privacy {
+
+    // Размер текста
+    font-size: 13px;
+
+    // Цвет текста
+    color: $muted;
+
+    // Выравниваем текст по центру
+    text-align: center;
+
+    // Высота строки
+    line-height: 1.23;
+}
+
+// Кнопка отправки формы
+.form__btn {
+
+    // Высота
+    height: 50px;
+
+    // Внутренние отступы
+    padding: 12px;
+
+    // Размер текста
+    font-size: 16px;
+
+    // Цвет текста
+    color: $white;
+
+    // Толщина шрифта
+    font-weight: 700;
+
+    // Выравниваем текст по центру
+    text-align: center;
+
+    // Цвет фона
+    background-color: $accent;
+
+    // Плавный переход при изменении цвета фона
+    transition: background-color 0.2s ease-in;
+
+    // Кнопка при наведении на неё курсора
+    &:hover {
+
+        // Увеличиваем яркость фона
+        background-color: saturate($accent, 10%);
+    }
+}
