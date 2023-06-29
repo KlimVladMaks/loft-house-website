@@ -24,14 +24,20 @@
 
             // Позиция псевдоэлемента
             left: 0;
-            top: 0;
+            top: 50%;
 
             // Размеры псевдоэлемента
             width: 21px;
             height: 21px;
 
+            // Сдвигаем псевдоэлемент
+            transform: translate(0, -50%);
+
             // Убираем повторение фонового изображения 
             background-repeat: no-repeat;
+
+            // Размещаем фоновое изображение по центру
+            background-position: center;
         }
     }
 
@@ -47,5 +53,19 @@
 
         // Фоновое изображение
         background-image: url("./../img/header/phone.svg");
+    }
+
+    // Медиа-запрос для планшетного размера
+    @include mediaTablet {
+        
+        // Размер текста
+        font-size: 14px;
+
+        // Для ссылок со значками в виде псевдоэлементов
+        &--map, &--phone {
+
+            // Внутренний левый отступ
+            padding-left: 26px;
+        }
     }
 }
