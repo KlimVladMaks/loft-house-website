@@ -105,6 +105,7 @@ a:hover {
   margin: 0 auto;
   padding: 0 15px;
   width: 1140px;
+  max-width: 100%;
 }
 .container--small {
   width: 840px;
@@ -155,6 +156,21 @@ a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+@media screen and (max-width: 999px) {
+  .header__nav {
+    display: none;
+  }
+}
+
+.header__nav-btn {
+  display: none;
+}
+@media screen and (max-width: 999px) {
+  .header__nav-btn {
+    display: block;
+  }
 }
 
 .header__title {

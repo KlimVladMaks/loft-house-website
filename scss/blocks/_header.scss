@@ -36,6 +36,31 @@
     align-items: center;
 }
 
+// Блок с навигацией
+.header__nav {
+
+    // Миксин с медиа-запросом для планшета
+    @include mediaTablet {
+
+        // Скрываем элемент
+        display: none;
+    }
+}
+
+// Блок с кнопкой открытия меню в мобильном режиме
+.header__nav-btn {
+
+    // Скрываем элемент
+    display: none;
+
+    // Миксин с медиа-запросом для планшета
+    @include mediaTablet {
+
+        // Блочное отображение
+        display: block;
+    }
+}
+
 // Заголовок хедера
 .header__title {
 

@@ -22,3 +22,14 @@
     // Шрифт
     font-family: $font-accent;
 }
+
+// Миксин с медиа-запросом для планшетов
+@mixin mediaTablet {
+
+    // При ширине экрана соответствующей планшету
+    @media screen and (max-width: $tablet) {
+
+        // Переданный в миксин контент
+        @content;
+    }
+}
