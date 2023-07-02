@@ -13,6 +13,14 @@
 
     // Межсимвольный интервал
     letter-spacing: 0.05em;
+
+    // При планшетном размере экрана
+    @include mediaTablet {
+
+        // Внутренние отступы
+        padding-top: 36px;
+        padding-bottom: 25px;
+    }
 }
 
 // Сетка с элементами футера
@@ -26,6 +34,16 @@
 
     // Отступы между колонками
     gap: 30px;
+
+    // При планшетном размере экрана
+    @include mediaTablet {
+
+        // Автоматическое распределение элементов по колонкам
+        grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+
+        // Расстояние между элементами сетки
+        gap: 40px 30px;
+    }
 }
 
 .footer__logo {
