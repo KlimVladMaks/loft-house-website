@@ -21,3 +21,29 @@ navBtn.onclick = function() {
     // Включаем или отключаем возможность скролла для сайта
     document.body.classList.toggle('no-scroll');
 }
+
+//* Макса для телефонных номеров 
+
+// Применяем маску для форм ввода номера телефона
+mask('[data-tel-input]');
+
+// Получаем формы ввода номера телефона
+const phoneInputs = document.querySelectorAll('[data-tel-input]');
+
+// Перебираем все формы ввода номера телефона
+phoneInputs.forEach((input) => {
+
+    // Добавляем слушателя, срабатывающего при вводе чего-то в форму
+    input.addEventListener('input', () => {
+        
+        // Если в форме содержится только плюс, то очищаем форму
+        if (input.value === '+') input.value = '';
+    })
+
+    // Добавляем слушателя, срабатывающего при снятии выделения с формы
+    input.addEventListener('blur', () => {
+        
+        // Если в форме содержится только плюс, то очищаем форму
+        if (input.value === '+') input.value = '';
+    })
+});
