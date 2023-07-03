@@ -18,6 +18,7 @@
 
         <!-- Подключаем CSS-файлы -->
         <link rel="stylesheet" href="./css/main.css">
+        <link rel="stylesheet" href="./libs/youtubeLightbox/youtubeLightbox.css">
 
     </head>
 
@@ -293,7 +294,7 @@
                 <div class="container">
 
                     <!-- Ссылка на видео -->
-                    <a href="https://youtu.be/2qry7AmdIn8" class="video__link">
+                    <a href="https://youtu.be/2qry7AmdIn8" data-youtubeLightbox class="video__link" target="_blank">
 
                         <!-- Иконка видео (кнопка воспроизведения) -->
                         <img src="./img/video/play.svg" alt="" class="video__icon">
@@ -468,9 +469,21 @@
 
         </footer>
 
+        <!-- Лайтбокс для ролика с YouTube -->
+        <div id="youtubelightbox" class="youtubelightbox">
+            <div class="youtubelightbox__centeredchild">
+                <div class="youtubelightbox__videowrapper">
+                    <div id="youtubelightboxPlayer"></div>
+                </div>
+            </div>
+        </div>
+
         <!-- Подключаем JS-скрипты -->
+        <script src="https://api-maps.yandex.ru/2.1/?apikey=8bf1d530-83dd-4f30-8ea8-22f7a62a9fd3&lang=ru_RU" 
+                type="text/javascript"></script>
         <script src="./libs/phoneMask/mask.js"></script>
         <script src="./libs/phoneMask/mask_list.js"></script>
+        <script src="./libs/youtubeLightbox/youtubeLightbox.js"></script>
         <script src="./js/main.js"></script>
 
     </body>

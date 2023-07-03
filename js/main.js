@@ -22,7 +22,7 @@ navBtn.onclick = function() {
     document.body.classList.toggle('no-scroll');
 }
 
-//* Макса для телефонных номеров 
+//* Маска для телефонных номеров 
 
 // Применяем маску для форм ввода номера телефона
 mask('[data-tel-input]');
@@ -47,3 +47,58 @@ phoneInputs.forEach((input) => {
         if (input.value === '+') input.value = '';
     })
 });
+
+// * Подключение Яндекс Карты
+
+// Функция ymaps.ready() будет вызвана, когда
+// загрузятся все компоненты API, а также когда будет готово DOM-дерево.
+ymaps.ready(init);
+function init(){
+
+    // Создание карты.
+    var map = new ymaps.Map("map", {
+        // Координаты центра карты.
+        // Порядок по умолчанию: «широта, долгота».
+        // Чтобы не определять координаты центра карты вручную,
+        // воспользуйтесь инструментом Определение координат.
+        center: [59.943543, 30.338928],
+        // Уровень масштабирования. Допустимые значения:
+        // от 0 (весь мир) до 19.
+        zoom: 16
+    });
+
+    // Создаём кастомную метку-указатель с информационной плашкой
+    var placemark = new ymaps.Placemark(
+        [59.943543, 30.338928], 
+        {
+            balloonContent: 
+            `
+            <div class="balloon">
+                <div class="balloon__address">Наб. реки Фонтанки 10-15</div>
+                <div class="balloon__contacts">
+                    <a href="tel:+78121234567">+8 (812) 123-45-67</a>
+                </div>
+            </div>
+			`
+        }, 
+        {
+        iconLayout: 'default#image',
+        iconImageHref: './img/map/location-pin.svg',
+        iconImageSize: [40, 40],
+        iconImageOffset: [-20, -40]
+    });
+
+    // Удаляем у карты лишние элементы
+    map.controls.remove('geolocationControl'); // удаляем геолокацию
+	map.controls.remove('searchControl'); // удаляем поиск
+	map.controls.remove('trafficControl'); // удаляем контроль трафика
+	map.controls.remove('typeSelector'); // удаляем тип
+	map.controls.remove('rulerControl'); // удаляем контрол правил
+	map.behaviors.disable(['scrollZoom']); // отключаем скролл карты (опционально)
+
+    // Размещаем созданную метку-указатель на карте
+    map.geoObjects.add(placemark);
+
+    // По-умолчанию открываем информационную плашку
+    placemark.balloon.open();
+}
